@@ -1,5 +1,5 @@
 # visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
-baseurl: /fdisk.it
+baseurl: /fdisk.it/
 name: Your New Jekyll Site
 markdown: redcarpet
 pygments: true
