@@ -5,12 +5,51 @@ title: Homepage
 <!-- Content
     ================================================== -->
 	<div class="container" role="main">
+		<div class="alert alert-info" role="alert">
+			Looking for the old fdisk FAQ?
+  			<a href="archive.html" class="alert-link">It's preserved here!</a>
+		</div>
 		<div class="well" style="margin-top:1em; text-align: center;">
-			<img src="img/muffin.png" alt="muffin logo">
-			<h2><i class="icon-ok-sign"></i> Have a Muffin</h2>
-			<h3>fdisk.it is back</h3>
+			<span class="fa-stack fa-lg fa-5x">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-user-md fa-stack-1x fa-inverse"></i>
+		</span>
+			<h2>fdisk.it</h2>
 			<p>
-				The original and best fdisk FAQ will return shortly...
+				JP's nerdy blog
 			</p>
 		</div>
+	</div>
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+	<div class="container">
+	<div class="col-lg-8">
+		<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+		<p class="author">
+			<span class="date"><i class="fa fa-calendar"></i> Posted on {{ post.date | date: '%d %B %Y' }} by <i class="fa fa-user"> JP</i></span>
+		</p>
+		<div class="content">
+			{{ post.content }}
+		</div>
+	</div>
+	</div>
+{% endfor %}
+
+	<div class="container">
+	<div class="col-lg-8">
+		<!-- Pagination links -->
+		<ul class="pagination">
+		  {% if paginator.previous_page %}
+		    <li><a href="{{ paginator.previous_page_path }}" class="previous">Previous</a></li>
+		  {% else %}
+		    <li><span class="previous">&laquo; Previous</span></li>
+		  {% endif %}
+		  <li><span class="page_number ">{{ paginator.page }}</span></li>
+		  {% if paginator.next_page %}
+		    <li><a href="{{ paginator.next_page_path }}" class="next">Next</a></li>
+		  {% else %}
+		    <li><span class="next ">Next &raquo;</span></li>
+		  {% endif %}
+		</ul>
+	</div>
 	</div>

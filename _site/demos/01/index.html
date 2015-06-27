@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>Best Fit Text</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!--
+    Magic made possible with Nick Brunt's TextFit:
+    https://github.com/nbrunt/TextFit
+
+    BoxFit is a pared down version
+    -->
+    <script type="text/javascript" src="boxfit.js"></script>
+
+    <script type="text/javascript">
+      function testBestFit() {
+        // increase font-size if very small quantities of text used
+        $("#BestFit").css("font-size", "100px").height($(window).height() - 40).textfit('bestfit');
+      }
+       $(document).ready(testBestFit);
+       $(window).resize(testBestFit);
+    </script>
+
+    <style type="text/css">
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Roboto'), local('Roboto-Regular')
+    }
+      #BestFit {
+        padding: 1vh;
+        font-size: 100px;
+        /* increase font-size if very small quantities of text used */
+        width: 95vw;
+        height: 98vh;
+        font-family: 'Roboto', sans-serif;
+      }
+    </style>
+
+  </head>
+
+  <body>
+      <div id="BestFit">
+        A previously fit 78 year-old man has a transurethral resection of the prostate
+       (TURP) performed under general anaesthesia taking 90 minutes to complete. Half an
+       hour after arrival in the recovery room he has not regained consciousness. Respiratory
+       effort is adequate and vital signs are stable.<br><br>
+       <b>Which of the following deranged investigations is most likely to account for his
+              current clinical condition?</b><br><br>
+        A. Haemoglobin 7.1 g/dl<br>
+        B. Serum sodium 114 mmol/L<br>
+        C. Serum glucose 2.8 mmol/L<br>
+        D. PaO2 8.9 kPa (FiO2 = 0.35)<br>
+        E. PaCO2 7.4 kPa
+      </div>
+  </body>
+
+</html>

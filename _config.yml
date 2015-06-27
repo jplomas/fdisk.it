@@ -1,8 +1,8 @@
 # visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
 baseurl: /fdisk.it
-name: Your New Jekyll Site
+name: fdisk.it
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 paginate: 10 # pagination basted on number of posts
 exclude: ["Gemfile", "Gemfile.lock", "README.md", 'sass', 'watch.sh', 'style.scss', 'bootstrap.scss'] # files to exclude
 
