@@ -10,7 +10,7 @@ There are rules of engagement for the use of PDFs online that aren’t always fo
 
 This is a screengrab from a PDF released by the [European Resuscitation Council](https://www.erc.edu/).  Note the awful white text on lime green (illegible!).  Is this what they intended?  Of course not, the overall design is actually pretty impressive: what they have done is released a PDF intended for _print_ as fodder for web users.  It’s meant to look like this:
 
-![ah!](/img/Screenshot_20_10_2015__22_01.png)
+![ah](/img/Screenshot_20_10_2015__22_01.png)
 
 Apple’s PDF viewers don’t contain a default CMYK profile, so documents built using this colour palate, the industry standard for print, show up incorrectly when viewed on Apple devices.
 
