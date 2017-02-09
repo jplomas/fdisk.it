@@ -1,0 +1,189 @@
+<html><head><script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script><script src="testSTV2.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css">
+<style>h2{margin:2em 0}.ui.container{padding-top:1em}</style>
+</head>
+<script></script>
+<body>
+<div class="ui container">
+<h2 class="ui header">3 Candidate STV Election Simulator</h2>
+<div class="ui two column grid">
+<div class="column">
+<h2 class="ui small header">Dr Alpha</h2>
+Fellowship dated 1.1.1980
+<h2 class="ui header small">Dr Bravo</h2>
+Fellowship dated 1.1.1990
+<h2 class="ui header small">Dr Charlie</h2>
+Fellowship dated 1.1.2000
+<div class="ui card">
+<div class="content">
+<div class="header">VP Election Simulator</div>
+</div>
+<div class="content">
+<div class="ui small feed" id="bang">
+Choose your votes then click the button below to simulate an STV election as per the RCoA Regulations.
+</div>
+</div>
+<div class="extra content">
+<button class="ui primary button" id="subm">
+Submit votes
+</button>
+</div>
+</div>
+</div>
+<div class="column" id="matrix">
+<div class="top attached ui four item menu">
+<a class="item active"></a>
+<a class="item active">First choice</a>
+<a class="item active">Second choice</a>
+<a class="item active">Third choice</a>
+</div>
+<div class="attached ui four item menu">
+<a class="item active" id="V1">Vote 1</a>
+<a class="item" id="1A">Nil</a>
+<a class="item" id="1B">Nil</a>
+<a class="item" id="1C">Nil</a>
+</div>
+<div class="attached ui four item menu">
+<a class="item active" id="V2">Vote 2</a>
+<a class="item" id="2A">Nil</a>
+<a class="item" id="2B">Nil</a>
+<a class="item" id="2C">Nil</a>
+</div>
+<div class="attached ui four item menu">
+<a class="item active" id="V3">Vote 3</a>
+<a class="item" id="3A">Nil</a>
+<a class="item" id="3B">Nil</a>
+<a class="item" id="3C">Nil</a>
+</div>
+<div class="attached ui four item menu">
+<a class="item active" id="V4">Vote 4</a>
+<a class="item" id="4A">Nil</a>
+<a class="item" id="4B">Nil</a>
+<a class="item" id="4C">Nil</a>
+</div>
+<div class="attached ui four item menu">
+<a class="item active" id="V5">Vote 5</a>
+<a class="item" id="5A">Nil</a>
+<a class="item" id="5B">Nil</a>
+<a class="item" id="5C">Nil</a>
+</div>
+<div class="attached ui four item menu">
+<a class="item active" id="V6">Vote 6</a>
+<a class="item" id="6A">Nil</a>
+<a class="item" id="6B">Nil</a>
+<a class="item" id="6C">Nil</a>
+</div>
+<div class="attached ui four item menu">
+<a class="item active" id="V7">Vote 7</a>
+<a class="item" id="7A">Nil</a>
+<a class="item" id="7B">Nil</a>
+<a class="item" id="7C">Nil</a>
+</div>
+<div class="attached ui four item menu">
+<a class="item active" id="V8">Vote 8</a>
+<a class="item" id="8A">Nil</a>
+<a class="item" id="8B">Nil</a>
+<a class="item" id="8C">Nil</a>
+</div>
+<div class="attached ui four item menu">
+<a class="item active" id="V9">Vote 9</a>
+<a class="item" id="9A">Nil</a>
+<a class="item" id="9B">Nil</a>
+<a class="item" id="9C">Nil</a>
+</div>
+<div class="attached ui four item menu">
+<a class="item active" id="V10">Vote 10</a>
+<a class="item" id="10A">Nil</a>
+<a class="item" id="10B">Nil</a>
+<a class="item" id="10C">Nil</a>
+</div>
+<div class="attached ui four item menu">
+<a class="item active" id="V11">Vote 11</a>
+<a class="item" id="11A">Nil</a>
+<a class="item" id="11B">Nil</a>
+<a class="item" id="11C">Nil</a>
+</div>
+<div class="attached ui four item menu">
+<a class="item active" id="V12">Vote 12</a>
+<a class="item" id="12A">Nil</a>
+<a class="item" id="12B">Nil</a>
+<a class="item" id="12C">Nil</a>
+</div>
+<div class="attached ui four item menu">
+<a class="item active" id="V13">Vote 13</a>
+<a class="item" id="13A">Nil</a>
+<a class="item" id="13B">Nil</a>
+<a class="item" id="13C">Nil</a>
+</div>
+<div class="attached ui four item menu">
+<a class="item active" id="V14">Vote 14</a>
+<a class="item" id="14A">Nil</a>
+<a class="item" id="14B">Nil</a>
+<a class="item" id="14C">Nil</a>
+</div>
+<div class="attached ui four item menu">
+<a class="item active" id="V15">Vote 15</a>
+<a class="item" id="15A">Nil</a>
+<a class="item" id="15B">Nil</a>
+<a class="item" id="15C">Nil</a>
+</div>
+<div class="attached ui four item menu">
+<a class="item active" id="V16">Vote 16</a>
+<a class="item" id="16A">Nil</a>
+<a class="item" id="16B">Nil</a>
+<a class="item" id="16C">Nil</a>
+</div>
+<div class="attached ui four item menu">
+<a class="item active" id="V17">Vote 17</a>
+<a class="item" id="17A">Nil</a>
+<a class="item" id="17B">Nil</a>
+<a class="item" id="17C">Nil</a>
+</div>
+<div class="attached ui four item menu">
+<a class="item active" id="V18">Vote 18</a>
+<a class="item" id="18A">Nil</a>
+<a class="item" id="18B">Nil</a>
+<a class="item" id="18C">Nil</a>
+</div>
+<div class="attached ui four item menu">
+<a class="item active" id="V19">Vote 19</a>
+<a class="item" id="19A">Nil</a>
+<a class="item" id="19B">Nil</a>
+<a class="item" id="19C">Nil</a>
+</div>
+<div class="attached ui four item menu">
+<a class="item active" id="V20">Vote 20</a>
+<a class="item" id="20A">Nil</a>
+<a class="item" id="20B">Nil</a>
+<a class="item" id="20C">Nil</a>
+</div>
+<div class="attached ui four item menu">
+<a class="item active" id="V21">Vote 21</a>
+<a class="item" id="21A">Nil</a>
+<a class="item" id="21B">Nil</a>
+<a class="item" id="21C">Nil</a>
+</div>
+<div class="attached ui four item menu">
+<a class="item active" id="V22">Vote 22</a>
+<a class="item" id="22A">Nil</a>
+<a class="item" id="22B">Nil</a>
+<a class="item" id="22C">Nil</a>
+</div>
+<div class="attached ui four item menu">
+<a class="item active" id="V23">Vote 23</a>
+<a class="item" id="23A">Nil</a>
+<a class="item" id="23B">Nil</a>
+<a class="item" id="23C">Nil</a>
+</div>
+<div class="bottom attached ui four item menu">
+<a class="item active" id="V24">Vote 24</a>
+<a class="item" id="24A">Nil</a>
+<a class="item" id="24B">Nil</a>
+<a class="item" id="24C">Nil</a>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
