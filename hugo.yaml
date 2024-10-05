@@ -1,0 +1,56 @@
+baseURL: 'https://fdisk.it/'
+languageCode: 'en-gb'
+title: 'fdisk.it'
+theme: 'terminal'
+timeZone: "Europe/London"
+menus:
+  main:
+    - identifier: about
+      name: About
+      url: /about.html
+      weight: 20
+    - identifier: posts
+      name: Posts
+      url: /posts
+      weight: 30
+    - identifier: tags
+      name: Tags
+      url: /tags
+      weight: 40
+pagination:
+  pagerSize: 10
+permalinks:
+  posts: "/posts/:year/:month/:day/:title/"
+taxonomies:
+  tag: "tags"
+  author: "authors"
+indexes:
+  tag: "tags"
+markup:
+  defaultMarkdownHandler: "goldmark"
+ignoreFiles:
+  - "themes/terminal/content"
+# outputs:
+#   blog:
+#     - HTML
+#     - RSS
+#     - sitemap-blog.xml
+#   home:
+#     - HTML
+#     - RSS
+#     - sitemap.xml
+params:
+  social:
+    - name: github
+      url: https://github.com/jplomas
+    - name: x
+      url: https://x.com/jplomas
+    - name: linkedin
+      url: https://linkedin.com/in/jplomas
+    - name: "buy me a coffee"
+      url: https://www.buymeacoffee.com/jplomas
+
+module:
+  hugoVersion:
+    extended: false
+    min: "0.116.0"
